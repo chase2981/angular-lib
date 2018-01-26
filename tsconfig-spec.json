@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "umd",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": false,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "rootDir": "./build",
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "types": [
+      "node",
+      "jasmine",
+      "ckeditor"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016",
+      "dom",
+      "es2015"
+    ]
+  },
+  "files": [
+    "./build/public_api.ts"
+  ],
+  "include": [
+    "./build/browser-test-shim.ts",
+    "./build/systemjs.config.ts",
+    "./build/**/*.d.ts",
+    "./build/**/*.spec.ts"
+  ],
+  "exclude": [
+    "**/node_modules"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@turbonemesis/angular-lib-tests"
+  }
+}
