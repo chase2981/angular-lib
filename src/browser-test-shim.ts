@@ -1,7 +1,7 @@
 declare var System: any;
 declare var __karma__: any;
 
-Error.stackTraceLimit = Infinity;
+// Error.stackTraceLimit = Infinity;
 
 // The default time that jasmine waits for an asynchronous test to finish is five seconds.
 // If this timeout is too short the CI may fail randomly because our asynchronous tests can

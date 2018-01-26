@@ -1,6 +1,6 @@
 module.exports = function(config) {
   config.set({
-    basePath: require('path').join(__dirname, '../'),
+    basePath: require('path').join(__dirname, './'),
     frameworks: ['jasmine'],
 
     plugins: [
@@ -33,14 +33,14 @@ module.exports = function(config) {
       {pattern: 'node_modules/rxjs/**/*', included: false, watched: false},
 
       // 'build/systemjs.config.js',
-      'angular-lib/dist/browser-test-shim.js',
+      'dist/browser-test-shim.js',
 
       //'build/**/*.+(js|js.map|css|html)',
 
       // Includes all package tests and source files into karma. Those files will be watched.
       // This pattern also matches all all sourcemap files and TypeScript files for debugging.
-      {pattern: 'angular-lib/build/**/*', included: false, watched: true},
-      {pattern: 'angular-lib/dist/**', included: false, watched: true}
+      {pattern: 'build/**/*', included: false, watched: true},
+      {pattern: 'dist/**', included: false, watched: true}
     ],
 
     reporters: ['progress', 'kjhtml'],

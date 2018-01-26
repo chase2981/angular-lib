@@ -8,13 +8,13 @@ NGC="node node_modules/.bin/ngc"
 # TSC="node node_modules/.bin/tsc"
 
 # Clean up previous distributions
-rm -rf ./angular-lib/dist ./angular-lib/build
+rm -rf ./dist ./build
 
 # Run gulp inline-templates
-$GULP inline-templates --gulpfile ./angular-lib/.gulpfile.js
+$GULP inline-templates --gulpfile ./.gulpfile.js
 
 # Run Typescript Compiler
-$NGC -p ./angular-lib/tsconfig.json
+$NGC -p ./tsconfig.json
 
 # Copy html files from src to dist
 # rsync -a --exclude=*.ts src/ dist/

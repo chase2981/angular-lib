@@ -5,13 +5,13 @@ NGC="node node_modules/.bin/ngc"
 TSC="node node_modules/.bin/tsc"
 
 # Clean up previous distributions
-rm -rf ./angular-lib/dist ./angular-lib/build
+rm -rf ./dist ./build
 
 # Run gulp inline-templates
-$GULP inline-templates --gulpfile ./angular-lib/.gulpfile.js
+$GULP inline-templates --gulpfile ./.gulpfile.js
 
 # Run Angular Compiler
-$TSC -p ./angular-lib/tsconfig-spec.json
+$TSC -p ./tsconfig-spec.json
 
 # rsync -a --exclude=*.ts src/ build/
 
@@ -19,4 +19,4 @@ $TSC -p ./angular-lib/tsconfig-spec.json
 # rsync -a --exclude=*.ts src/app dist
 
 # start karma
-$KARMA start ./angular-lib/.karma.conf.js --single-run
+$KARMA start ./.karma.conf.js --single-run
