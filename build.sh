@@ -1,39 +1,14 @@
 #!/bin/bash
 
-# Declaration(s)
+# declaration(s)
 GULP="node node_modules/.bin/gulp"
-# KARMA="node node_modules/.bin/karma"
 NGC="node node_modules/.bin/ngc"
-# ROLLUP="node node_modules/.bin/rollup"
-# TSC="node node_modules/.bin/tsc"
 
-# Clean up previous distributions
+# clean up previous distributions
 rm -rf ./dist ./build
 
-# Run gulp inline-templates
+# run gulp inline-templates
 $GULP inline-templates --gulpfile ./.gulpfile.js
 
-# Run Typescript Compiler
+# run angular compiler
 $NGC -p ./tsconfig.json
-
-# Copy html files from src to dist
-# rsync -a --exclude=*.ts src/ dist/
-let prev_process_code=$?
-
-# Basic if statement
-if [ $(( $prev_process_code == 0 )) ]
-then
-echo typescript success!!.
-# # Copy non-js files from build to dist
-# rsync -a build/ dist/
-#
-# # Rollup simple-ui-lib.js
-# $ROLLUP -c .rollup-config.js
-pwd
-else
-echo compilation failed!!
-fi
-date
-
-# Copy library package.json
-# cp src/package.json dist/package.json
