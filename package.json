@@ -1,9 +1,11 @@
 {
   "name": "@turbonemesis/angular-lib",
-  "version": "0.0.0-beta.1",
+  "version": "0.0.0-beta.2",
   "description": "compiles templates when provided a path to a template file by first http.get()ing the template and then compiling it with the provided view model",
   "main": "dist/public_api.js",
   "typings": "dist/public_api.d.ts",
+  "repository": "https://github.com/chase2981/angular-lib",
+  "readme": "./README.md",
   "scripts": {
     "build": "./build.sh",
     "test": "./test.sh",
