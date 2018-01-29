@@ -3,3 +3,9 @@
 [![David](https://img.shields.io/david/chase2981/angular-lib.svg)](https://github.com/chase2981/angular-lib)
 
 # angular-lib
+`
+npm install -g semantic-release-cli
+
+cd your-module
+semantic-release-cli setup
+`
