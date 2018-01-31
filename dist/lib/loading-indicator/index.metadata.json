@@ -1,1 +1,0 @@
-[{"__symbolic":"module","version":4,"metadata":{},"exports":[{"from":"./loading-indicator.component","export":["LoadingIndicatorComponent"]},{"from":"./loading-indicator.module","export":["LoadingIndicatorModule"]}]}]

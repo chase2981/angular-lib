@@ -2,7 +2,9 @@ module.exports = function(config) {
   config.set({
     basePath: require('path').join(__dirname, './'),
     frameworks: ['jasmine'],
-
+    client: {
+      args: ['--grep', config.grep]
+    },
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),

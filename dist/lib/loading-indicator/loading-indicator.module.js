@@ -1,40 +1,40 @@
-"use strict";
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var common_1 = require("@angular/common");
-var loading_indicator_component_1 = require("./loading-indicator.component");
-var LoadingIndicatorModule = (function () {
-    function LoadingIndicatorModule() {
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+(function (factory) {
+    if (typeof module === "object" && typeof module.exports === "object") {
+        var v = factory(require, exports);
+        if (v !== undefined) module.exports = v;
     }
-    LoadingIndicatorModule.decorators = [
-        { type: core_1.NgModule, args: [{
-                    imports: [
-                        common_1.CommonModule,
-                    ],
-                    declarations: [
-                        loading_indicator_component_1.LoadingIndicatorComponent,
-                    ],
-                    exports: [
-                        loading_indicator_component_1.LoadingIndicatorComponent,
-                    ]
-                },] },
-    ];
-    /** @nocollapse */
-    LoadingIndicatorModule.ctorParameters = function () { return []; };
-    return LoadingIndicatorModule;
-}());
-exports.LoadingIndicatorModule = LoadingIndicatorModule;
-function LoadingIndicatorModule_tsickle_Closure_declarations() {
-    /** @type {!Array<{type: !Function, args: (undefined|!Array<?>)}>} */
-    LoadingIndicatorModule.decorators;
-    /**
-     * @nocollapse
-     * @type {function(): !Array<(null|{type: ?, decorators: (undefined|!Array<{type: !Function, args: (undefined|!Array<?>)}>)})>}
-     */
-    LoadingIndicatorModule.ctorParameters;
-}
-//# sourceMappingURL=loading-indicator.module.js.map
+    else if (typeof define === "function" && define.amd) {
+        define(["require", "exports", "@angular/core", "@angular/common", "./loading-indicator.component"], factory);
+    }
+})(function (require, exports) {
+    "use strict";
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var core_1 = require("@angular/core");
+    var common_1 = require("@angular/common");
+    var loading_indicator_component_1 = require("./loading-indicator.component");
+    var LoadingIndicatorModule = (function () {
+        function LoadingIndicatorModule() {
+        }
+        LoadingIndicatorModule = __decorate([
+            core_1.NgModule({
+                imports: [
+                    common_1.CommonModule,
+                ],
+                declarations: [
+                    loading_indicator_component_1.LoadingIndicatorComponent,
+                ],
+                exports: [
+                    loading_indicator_component_1.LoadingIndicatorComponent,
+                ]
+            })
+        ], LoadingIndicatorModule);
+        return LoadingIndicatorModule;
+    }());
+    exports.LoadingIndicatorModule = LoadingIndicatorModule;
+});

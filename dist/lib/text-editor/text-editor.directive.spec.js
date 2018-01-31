@@ -1,16 +1,20 @@
+/* tslint:disable:no-unused-variable */
 (function (factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         var v = factory(require, exports);
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./lib/index"], factory);
+        define(["require", "exports"], factory);
     }
 })(function (require, exports) {
     "use strict";
-    function __export(m) {
-        for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-    }
     Object.defineProperty(exports, "__esModule", { value: true });
-    __export(require("./lib/index"));
+    // import { TextEditorDirective } from './text-editor.directive';
+    describe('Directive: TextEditor', function () {
+        it('should create an instance', function () {
+            //let directive = new TextEditor();
+            //expect(directive).toBeTruthy();
+        });
+    });
 });
