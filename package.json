@@ -9,7 +9,7 @@
   "scripts": {
     "build": "./build.sh",
     "commit": "git-cz",
-    "test": "./test.sh",
+    "test": "./test.sh --single-run true",
     "prepush": "npm test && npm run build",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"

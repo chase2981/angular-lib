@@ -9,12 +9,11 @@ import 'ckeditor';
 
 @Directive({
     selector: '[rdTextEditor]'
-    // providers: [new NgModelInputValueAccessor(TextEditorDirective)]
 })
 export class TextEditorDirective implements OnInit, AfterViewInit, OnDestroy {
     ngModel: string = null;
     @Input() elem;
-    @Input() options: {} = {};
+    @Input() options: CKEDITOR.config = {};
     @Output() change: EventEmitter<string> = new EventEmitter<string>();
     @HostBinding('contentEditable') @Input() inline: boolean = false;
 

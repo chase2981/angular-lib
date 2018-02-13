@@ -8,7 +8,7 @@ declare var __karma__: any;
 // take longer in some situations (e.g Saucelabs and Browserstack tunnels)
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 
-__karma__.loaded = function () {};
+__karma__.loaded = function () { };
 
 var baseDir = '/base';
 var specFiles = Object.keys(__karma__.files).filter(isMaterialSpecFile);
@@ -55,7 +55,7 @@ System.config({
   },
   packages: {
     // Thirdparty barrels.
-    'rxjs': {main: 'index'},
+    'rxjs': { main: 'index' },
 
     'ckeditor': { main: 'ckeditor' },
 
@@ -68,7 +68,7 @@ System.config({
 });
 
 // Configure the Angular test bed and run all specs once configured.
- configureTestBed()
+configureTestBed()
   .then(runMaterialSpecs)
   .then(__karma__.start, __karma__.error);
 
@@ -76,7 +76,7 @@ System.config({
 /** Runs the Angular Material specs in Karma. */
 function runMaterialSpecs() {
   // By importing all spec files, Karma will run the tests directly.
-  return Promise.all(specFiles.map(function(fileName) {
+  return Promise.all(specFiles.map(function (fileName) {
     return System.import(fileName);
   }));
 }
@@ -124,7 +124,7 @@ function patchTestBedToDestroyFixturesAfterEveryTest(testBed) {
   // Monkey-patch the resetTestingModule to destroy fixtures outside of a try/catch block.
   // With https://github.com/angular/angular/commit/2c5a67134198a090a24f6671dcdb7b102fea6eba
   // errors when destroying components are no longer causing Jasmine to fail.
-  testBed.resetTestingModule = function() {
+  testBed.resetTestingModule = function () {
     try {
       this._activeFixtures.forEach(function (fixture) { fixture.destroy(); });
     } finally {
@@ -138,7 +138,7 @@ function patchTestBedToDestroyFixturesAfterEveryTest(testBed) {
   // for us because it doesn't allow developers to see what test actually failed.
   // Fixing this by resetting the testing module after each test.
   // https://github.com/angular/angular/blob/master/packages/core/testing/src/before_each.ts#L25
-  afterEach(function() {
+  afterEach(function () {
     testBed.resetTestingModule();
   });
 }

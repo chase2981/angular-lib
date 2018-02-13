@@ -3,7 +3,7 @@ module.exports = function(config) {
     basePath: require('path').join(__dirname, './'),
     frameworks: ['jasmine'],
     client: {
-      args: ['--grep', config.grep]
+      args: config.grep ? ['--grep', config.grep] : []
     },
     plugins: [
       require('karma-jasmine'),
@@ -31,6 +31,7 @@ module.exports = function(config) {
       {pattern: 'node_modules/zone.js/dist/fake-async-test.js', included: true, watched: false},
 
       // Include all Angular dependencies
+      {pattern: 'node_modules/ckeditor/**/*', included: false, watched: false},
       {pattern: 'node_modules/@angular/**/*', included: false, watched: false},
       {pattern: 'node_modules/rxjs/**/*', included: false, watched: false},
 
@@ -41,8 +42,8 @@ module.exports = function(config) {
 
       // Includes all package tests and source files into karma. Those files will be watched.
       // This pattern also matches all all sourcemap files and TypeScript files for debugging.
-      {pattern: 'build/**/*', included: false, watched: true},
-      {pattern: 'dist/**', included: false, watched: true}
+      // {pattern: 'build/**/*', included: false, watched: true}, /* may be needed for sourcemaps */
+      {pattern: 'dist/lib/**', included: false, watched: true}
     ],
 
     reporters: ['progress', 'kjhtml'],

@@ -16,4 +16,4 @@ $GULP inline-templates --gulpfile ./.gulpfile.js
 $TSC -p ./tsconfig-spec.json
 
 # start karma
-$KARMA start ./.karma.conf.js --single-run
+$KARMA start ./.karma.conf.js $1 $2 $3 $4 $5 $6 $7 $8 $9
